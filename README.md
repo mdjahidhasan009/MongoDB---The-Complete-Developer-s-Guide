@@ -200,13 +200,17 @@ mongo is a command line shell that can interact with the client (for example, sy
 ### Start mongod process(default port is 27017)
 
 ```bash
-sudo mongod => To start in default port
-sudo mongod --port 27018 => can use if in any case default port 27017 not available 
+# To start in default port 27017
+mongo
+# To start at 27018 port 
+mongo --port 27018
 ```
 
 ### Start MongoDB on the server
 
 ```bash
-mongo => to start in default port 27017
-mongo --port 27018 => to start at 27018 port 
+# To start in default port 27017
+mongo
+# To start at 27018 port 
+mongo --port 27018
 ```
