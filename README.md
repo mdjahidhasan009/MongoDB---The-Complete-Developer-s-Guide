@@ -4,7 +4,7 @@
 
 [Initial Concepts](readme.md)
 
-[Basic CRUD, Projection, Embedded/Nested Documents, Array]()
+[Basic CRUD, Projection, Embedded/Nested Documents, Array](Other_Pages/Basic_CRUD_Projection_Embedded_or_Nested_Documents_Array.md)
 
 [Schema & Relations]()
 
@@ -35,27 +35,27 @@
 
 # Initial Concepts
 
-<aside>
-💡 MongoDB names came from **humongous** as it can **store** lots and **lots of data**.
+>> MongoDB names came from **humongous** as it can **store** lots and **lots of data**.
 
-- Store data as documents like JavaScript Object
-- noSQL database
-- Store like JSON
-- BSON (b ⇒ binary) Data Structure into server
-- No schema(can add if wanted)
-- No / few relations
-- Flow of data
-    - Database
-    - Collection(Like table)
-    - Document(like JSON object values these are schemaless
-</aside>
+>  - Store data as documents like JavaScript Object
+>  - noSQL database
+>  - Store like JSON
+>  - BSON (b ⇒ binary) Data Structure into server
+>  - No schema(can add if wanted)
+>  - No / few relations
+>  - Flow of data
+>      - Database
+>      - Collection(Like table)
+>      - Document(like JSON object values these are schemaless
 
-> **Normalizing**: Storing and distributing data in multiple tables where every table has a clear schema and use lots of relations(in SQL).
+
+>> **Normalizing**: Storing and distributing data in multiple tables where every table has a clear schema and use lots of relations(in SQL).
 > 
 
-As MongoDB saves all in one single document so for fetching it does not need any complex operation like join(SQL) so MongoDB can fetch query is more simple, more flexible, and more efficient(as no need to merge collection/table) than SQL. 
+> As MongoDB saves all in one single document so for fetching it does not need any complex operation like join(SQL) so MongoDB can fetch query is more simple, more flexible, and more efficient(as no need to 
+> merge collection/table) than SQL. 
 
-MongoDB is popular for **read and write heavy** applications (like sensors which send data every second/online shop/blog).
+> MongoDB is popular for **read and write heavy** applications (like sensors which send data every second/online shop/blog).
 
 # Some very basic commands
 
@@ -125,32 +125,20 @@ Others options
 
 ### Stitch
 
-<aside>
-💡 Basically a serverless backend solution.
 
-</aside>
+> 💡 Basically a serverless backend solution.
+
 
 That gives
 
-<aside>
-💡 **Serverless Query Api** **⇒** a tool sets or tools to directly database query from inside client apps.
 
-</aside>
+> 💡 **Serverless Query Api** **⇒** a tool sets or tools to directly database query from inside client apps.
 
-<aside>
-💡 **Serverless Functions(in the cloud ⇒ related to js) ⇒** a tool sets or tools to directly database query from inside client apps.
+> 💡 **Serverless Functions(in the cloud ⇒ related to js) ⇒** a tool sets or tools to directly database query from inside client apps.
 
-</aside>
+> 💡 **Database Triggers ⇒** that allows us to events in a database, like a document was inserted and then execute a function in response to that and that function could then maybe send an e-mail.
 
-<aside>
-💡 **Database Triggers ⇒** that allows us to events in a database, like a document was inserted and then execute a function in response to that and that function could then maybe send an e-mail.
-
-</aside>
-
-<aside>
-💡 **Real-Time Sync ⇒** basically is built to synchronize a database in a cloud with that mobile offline supporting database.
-
-</aside>
+> 💡 **Real-Time Sync ⇒** basically is built to synchronize a database in a cloud with that mobile offline supporting database.
 
 ## How MongoDB works
 
@@ -190,12 +178,11 @@ BSON
 
 ### MongoD service
 
-<aside>
-💡 **mongod** stands for “**Mongo Daemon**”. mongod is a **background process** used by MongoDB. The main purpose of mongod is to manage all the MongoDB server tasks. For instance, accepting requests, responding to clients, and memory management.
 
-mongo is a command line shell that can interact with the client (for example, system administrators and developers).
+>💡 **mongod** stands for “**Mongo Daemon**”. mongod is a **background process** used by MongoDB. The main purpose of mongod is to manage all the MongoDB server tasks. For instance, accepting requests, 
+> responding to clients, and memory management.
+> mongo is a command line shell that can interact with the client (for example, system administrators and developers).
 
-</aside>
 
 ### Start mongod process(default port is 27017)
 
