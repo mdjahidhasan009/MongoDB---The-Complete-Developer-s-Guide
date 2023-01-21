@@ -4,7 +4,7 @@
 
 [Initial Concepts](readme.md)
 
-[Basic CRUD, Projection, Embedded/Nested Documents, Array](Other_Pages/Basic_CRUD_Projection_Embedded_or_Nested_Documents_Array.md)
+[Basic CRUD, Projection, Embedded/Nested Documents, Array](Other_Pages/Basic_CRUD_Projection_Embedded_or_Nested_Documents_Array/Basic_CRUD_Projection_Embedded_or_Nested_Documents_Array.md)
 
 [Schema & Relations]()
 
@@ -35,7 +35,7 @@
 
 # Initial Concepts
 
->> MongoDB names came from **humongous** as it can **store** lots and **lots of data**.
+> 💡MongoDB names came from **humongous** as it can **store** lots and **lots of data**.
 
 >  - Store data as documents like JavaScript Object
 >  - noSQL database
@@ -49,7 +49,7 @@
 >      - Document(like JSON object values these are schemaless
 
 
->> **Normalizing**: Storing and distributing data in multiple tables where every table has a clear schema and use lots of relations(in SQL).
+>💡 **Normalizing**: Storing and distributing data in multiple tables where every table has a clear schema and use lots of relations(in SQL).
 > 
 
 > As MongoDB saves all in one single document so for fetching it does not need any complex operation like join(SQL) so MongoDB can fetch query is more simple, more flexible, and more efficient(as no need to 
