@@ -14,4 +14,4 @@
 > differently). Details number types. Binary Data.
 
 # CRUD
-[Create/Insert](Other_Pages/Basic_CRUD_Projection_Embedded_or_Nested_Documents_Array/CRUD/create_or_insert.md)
+[Create/Insert](CRUD/create_or_insert.md)
