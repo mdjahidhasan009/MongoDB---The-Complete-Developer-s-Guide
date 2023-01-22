@@ -35,27 +35,28 @@
 
 # Initial Concepts
 
+### MongoDB
 > 💡MongoDB names came from **humongous** as it can **store** lots and **lots of data**.
 
->  - Store data as documents like JavaScript Object
->  - noSQL database
->  - Store like JSON
->  - BSON (b ⇒ binary) Data Structure into server
->  - No schema(can add if wanted)
->  - No / few relations
->  - Flow of data
->      - Database
->      - Collection(Like table)
->      - Document(like JSON object values these are schemaless
+- Store data as documents like JavaScript Object
+- noSQL database
+- Store like JSON
+- BSON (b ⇒ binary) Data Structure into server
+- No schema(can add if wanted)
+- No / few relations
+- Flow of data
+  - Database
+  - Collection(Like table)
+  - Document(like JSON object values these are schemaless
+
+### Normalizing
+> 💡 Storing and distributing data in multiple tables where every table has a clear schema and use lots of relations(in SQL). 
+
+* As MongoDB saves all in one single document so for fetching it does not need any complex operation like join(SQL) so MongoDB can fetch query is more simple, more flexible, and more efficient(as no need to 
+ merge collection/table) than SQL. 
 
 
->💡 **Normalizing**: Storing and distributing data in multiple tables where every table has a clear schema and use lots of relations(in SQL).
-> 
-
-> As MongoDB saves all in one single document so for fetching it does not need any complex operation like join(SQL) so MongoDB can fetch query is more simple, more flexible, and more efficient(as no need to 
-> merge collection/table) than SQL. 
-
-> MongoDB is popular for **read and write heavy** applications (like sensors which send data every second/online shop/blog).
+* MongoDB is popular for **read and write heavy** applications (like sensors which send data every second/online shop/blog).
 
 # Some very basic commands
 
@@ -117,28 +118,22 @@ cls
 2. Atlas(Cloud) 
 3. Mobile
 
-Others options
+Other options
 
 1. Compass
 2. BI Connectors
 3. MongoDB Charts
 
 ### Stitch
-
-
 > 💡 Basically a serverless backend solution.
-
-
-That gives
-
-
-> 💡 **Serverless Query Api** **⇒** a tool sets or tools to directly database query from inside client apps.
-
-> 💡 **Serverless Functions(in the cloud ⇒ related to js) ⇒** a tool sets or tools to directly database query from inside client apps.
-
-> 💡 **Database Triggers ⇒** that allows us to events in a database, like a document was inserted and then execute a function in response to that and that function could then maybe send an e-mail.
-
-> 💡 **Real-Time Sync ⇒** basically is built to synchronize a database in a cloud with that mobile offline supporting database.
+### Serverless Query Api
+> 💡 A tool sets or tools to directly database query from inside client apps.
+### Serverless Functions(in the cloud ⇒ related to js)
+> 💡 A tool sets or tools to directly database query from inside client apps.
+### Database Triggers
+> 💡 That allows us to events in a database, like a document was inserted and then execute a function in response to that and that function could then maybe send an e-mail.
+### Real-Time Sync
+> 💡 Basically is built to synchronize a database in a cloud with that mobile offline supporting database.
 
 ## How MongoDB works
 
