@@ -250,7 +250,7 @@ db.friends.aggregate([
 
 # Using projection, `$slice` with Arrays
 
-Want to print the first document from `examScores` arrays. [Link of the whole document](Array%20d03143f85dd643c499501d3125775971.md)
+Want to print the first document from `examScores` arrays. [Link of the whole document](Array.md)
 
 1 ⇒ means get first element from start or front or array
 
@@ -385,7 +385,7 @@ Start at position two(from start/front) and give one element
 
 `$size` calculate the length of an array
 
-There are three document in friend collection and each document has `examScores` document where have array. [See data insertion](Array%20d03143f85dd643c499501d3125775971.md).
+There are three document in friend collection and each document has `examScores` document where have array. [See data insertion](Array.md).
 
 ```cpp
 > db.friends.aggregate([

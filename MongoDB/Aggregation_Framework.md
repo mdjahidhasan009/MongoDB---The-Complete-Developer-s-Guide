@@ -1179,12 +1179,12 @@ db.persons.aggregate(
     ```
     
 
-[Group](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Group%20382a876c93814149adb98dd030756003.md)
+[Group](Aggregation_Framework/Group.md)
 
-[Project](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Project%200448a2d7885348b19268e107a93412f7.md)
+[Project](Aggregation_Framework/Project.md)
 
-- [Turning the Location Into a geoJSON Object ](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Project%200448a2d7885348b19268e107a93412f7/Turning%20the%20Location%20Into%20a%20geoJSON%20Object%2031afdd6cf981499b97efe339e8975808.md)
-- [Understanding the ISO Week Year Operator](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Project%200448a2d7885348b19268e107a93412f7/Understanding%20the%20ISO%20Week%20Year%20Operator%20c8dd89ca2e8e4b9ea806335edce6ade4.md)
+- [Turning the Location Into a geoJSON Object ](Aggregation_Framework/Project/Turning_the_Location_Into_a_geoJSON_Object.md)
+- [Understanding the ISO Week Year Operator](Aggregation_Framework/Project/Understanding_the_ISO_Week_Year_Operator.md)
 
 # `$group` vs `$project`
 
@@ -1202,15 +1202,15 @@ db.persons.aggregate(
 3. transform a single document, add new fields, and so on.
 4. have a one-to-one relation, **include/exclude fields**.
 
-[Array](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Array%20d03143f85dd643c499501d3125775971.md)
+[Array](Aggregation_Framework/Array.md)
 
-[Bucket](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Bucket%205e4ebe34db3846ea85d5ed8aaf502eea.md)
+[Bucket](Aggregation_Framework/Bucket.md)
 
-[Additional Stages](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Additional%20Stages%2036f0831a8b244a0a88d607348b809158.md)
+[Additional Stages](Aggregation_Framework/Additional_Stages.md)
 
-[Writing Pipeline Results Into a New Collection](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/Writing%20Pipeline%20Results%20Into%20a%20New%20Collection%2032d48fc470d444f5b43250a5505cd418.md)
+[Writing Pipeline Results Into a New Collection](Aggregation_Framework/Writing_Pipeline_Results_Into_a_New_Collection.md)
 
-[GeoNear](Aggregation%20Framework%20750116ee400b421292c334036d659f8f/GeoNear%205a6a30f8c53343f981de882f00f670e0.md)
+[GeoNear](Aggregation_Framework/GeoNear.md)
 
 # Stages & Operators
 

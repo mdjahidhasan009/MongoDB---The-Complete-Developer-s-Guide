@@ -2,53 +2,53 @@
 
 - Some examples of PH course have to see is those are in the course will marge with this page
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb.png)
+    ![mongodb.png](Update/mongodb.png)
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%201.png)
-    
-    Result
-    
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%202.png)
-    
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%203.png)
+    ![mongodb.png](Update/mongodb%201.png)
     
     Result
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%204.png)
+    ![mongodb.png](Update/mongodb%202.png)
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%205.png)
-    
-    Result
-    
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%206.png)
-    
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%207.png)
+    ![mongodb.png](Update/mongodb%203.png)
     
     Result
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%208.png)
+    ![mongodb.png](Update/mongodb%204.png)
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%209.png)
-    
-    Result
-    
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2010.png)
-    
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2011.png)
+    ![mongodb.png](Update/mongodb%205.png)
     
     Result
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2012.png)
+    ![mongodb.png](Update/mongodb%206.png)
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2013.png)
+    ![mongodb.png](Update/mongodb%207.png)
     
     Result
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2014.png)
+    ![mongodb.png](Update/mongodb%208.png)
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2015.png)
+    ![mongodb.png](Update/mongodb%209.png)
     
-    ![mongodb.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/mongodb%2016.png)
+    Result
+    
+    ![mongodb.png](Update/mongodb%2010.png)
+    
+    ![mongodb.png](Update/mongodb%2011.png)
+    
+    Result
+    
+    ![mongodb.png](Update/mongodb%2012.png)
+    
+    ![mongodb.png](Update/mongodb%2013.png)
+    
+    Result
+    
+    ![mongodb.png](Update/mongodb%2014.png)
+    
+    ![mongodb.png](Update/mongodb%2015.png)
+    
+    ![mongodb.png](Update/mongodb%2016.png)
     
 
 1. Document Updating Operator 2. Updating Fields 3. Updating Arrays
@@ -1006,7 +1006,7 @@ More than one element
     
     Although we keep Hiking last but for sorting based on frequency it came first
     
-    ![Add.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/Add.png)
+    ![Add.png](Update/Add.png)
     
 
 Also can add specified amount of element from `$each` array. Such as `$sort: {frequency: -1}, $slice: 1` will first sort array in `$each` by there frequency and then will return first element. `$slice: n` have to replace n with number and `$slice` will return first n numbers of element from the array.
@@ -1028,11 +1028,11 @@ db.users.updateOne({name: 'Maria'}, {$pull: {hobbies: {title: 'Hiking'}}})
     
     Before
     
-    ![before.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/before.png)
+    ![before.png](Update/before.png)
     
     After
     
-    ![After.png](Update%200b8ee8a854664964b4bfe3cd01d642c2/After.png)
+    ![After.png](Update/After.png)
     
 
 ### Remove the last element of an array

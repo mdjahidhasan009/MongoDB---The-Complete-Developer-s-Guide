@@ -1,14 +1,14 @@
 # Create/Insert, Write concern, Atomicity
 
-- [insertOne](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-- [insertMany](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-- [insert](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-- [Working with insert](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-    - [Ordered List](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-    - [Unordered List](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-- [Write Concern](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-- [Atomicity](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
-- [Importing Data](Create%20Insert,%20Write%20concern,%20Atomicity%20970780e8ee9a4f4a9890becbf7fb3c24.md)
+- [insertOne](Create_Insert,_Write_concern,_Atomicity.md)
+- [insertMany](Create_Insert,_Write_concern,_Atomicity.md)
+- [insert](Create_Insert,_Write_concern,_Atomicity.md)
+- [Working with insert](Create_Insert,_Write_concern,_Atomicity.md)
+    - [Ordered List](Create_Insert,_Write_concern,_Atomicity.md)
+    - [Unordered List](Create_Insert,_Write_concern,_Atomicity.md)
+- [Write Concern](Create_Insert,_Write_concern,_Atomicity.md)
+- [Atomicity](Create_Insert,_Write_concern,_Atomicity.md)
+- [Importing Data](Create_Insert,_Write_concern,_Atomicity.md)
 
 <aside>
 💡 `insertOne()` ⇒ inserting one document.

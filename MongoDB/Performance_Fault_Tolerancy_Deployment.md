@@ -116,7 +116,7 @@ But the data is nor permanently deleted, If by using Cache the can retrieve the 
 
 Client(shell , Driver) <--Read-->  MongoDB Server Primary Node --> Replica Set(Primary Node --> 1. Secondary Node 2. Secondary Node
 
-![Screenshot from 2022-10-22 22-45-07.png](Performance%20Fault%20Tolerancy%20Deployment%20903db04711854a7d9b756719b745adb6/Screenshot_from_2022-10-22_22-45-07.png)
+![Screenshot from 2022-10-22 22-45-07.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_22-45-07.png)
 
 > If we add replica node then if we make a write request then it will be go to the Client then MongoDB server then primary node where we have the database. And if we have secondary node MongoDB asynchronously(not instantly) will replicate(copy) to in those secondary node. If primary node goes offline then data read from replica (Secondary Node).
 > 
@@ -192,13 +192,13 @@ BroadCast >	 |       |                          to right Shard       |
 shared    shared    shared                                         shared
 ```
 
-![Screenshot from 2022-10-22 23-09-18.png](Performance%20Fault%20Tolerancy%20Deployment%20903db04711854a7d9b756719b745adb6/Screenshot_from_2022-10-22_23-09-18.png)
+![Screenshot from 2022-10-22 23-09-18.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_23-09-18.png)
 
-![Screenshot from 2022-10-22 23-08-19.png](Performance%20Fault%20Tolerancy%20Deployment%20903db04711854a7d9b756719b745adb6/Screenshot_from_2022-10-22_23-08-19.png)
+![Screenshot from 2022-10-22 23-08-19.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_23-08-19.png)
 
 # Deploying a MongoDB Server
 
-![Screenshot from 2022-10-22 23-10-57.png](Performance%20Fault%20Tolerancy%20Deployment%20903db04711854a7d9b756719b745adb6/Screenshot_from_2022-10-22_23-10-57.png)
+![Screenshot from 2022-10-22 23-10-57.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_23-10-57.png)
 
 localhost(mongod) -------> Atlas(mongod)
 

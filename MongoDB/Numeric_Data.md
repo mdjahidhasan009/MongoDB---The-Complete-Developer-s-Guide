@@ -28,7 +28,7 @@ Number more complex than any other
 
 In mongoDB driver is a javaScript based driver. All numeric values stored as a double. Such as 74 is stored as double and also 74.00 stored as double in MongoDB shell. But in Python 55 is int and 55.0 is float.
 
-In this  case age of Max maybe store as 29.0000002 and will be some imprecision at some point. But we do not see this but if we use MongoDB shell this will save number like this. [Proof](Numeric%20Data%209b2e24d3b41a44faa3e53616aaa5a13b.md)
+In this  case age of Max maybe store as 29.0000002 and will be some imprecision at some point. But we do not see this but if we use MongoDB shell this will save number like this. [Proof](Numeric_Data.md)
 
 ```bash
 > use numeric

@@ -24,15 +24,15 @@ db.myCollection.find({age: { $gt: 30}})
 
 - Some more examples
     
-    ![mongodb.png](Read%2023f10953dc90438ca791b073a1c9216f/mongodb.png)
+    ![mongodb.png](Read/mongodb.png)
     
-    ![mongodb.png](Read%2023f10953dc90438ca791b073a1c9216f/mongodb%201.png)
+    ![mongodb.png](Read/mongodb%201.png)
     
-    ![mongodb.png](Read%2023f10953dc90438ca791b073a1c9216f/mongodb%202.png)
+    ![mongodb.png](Read/mongodb%202.png)
     
-    ![mongodb.png](Read%2023f10953dc90438ca791b073a1c9216f/mongodb%203.png)
+    ![mongodb.png](Read/mongodb%203.png)
     
-    ![mongodb.png](Read%2023f10953dc90438ca791b073a1c9216f/mongodb%204.png)
+    ![mongodb.png](Read/mongodb%204.png)
     
 
 ### Operators
@@ -123,15 +123,15 @@ db.myCollection.find({age: { $gt: 30}})
 
 ## Query Selectors
 
-[Comparison](Read%2023f10953dc90438ca791b073a1c9216f/Comparison%20f17aab01365d4a8398beb7a24af9974f.md)
+[Comparison](Read/Comparison.md)
 
-[Logical](Read%2023f10953dc90438ca791b073a1c9216f/Logical%20fce16750a02a4f86805dbbdd9692b213.md)
+[Logical](Read/Logical.md)
 
-[Element](Read%2023f10953dc90438ca791b073a1c9216f/Element%20e8e47dedff1a4f698e344ae14418122e.md)
+[Element](Read/Element.md)
 
-[Evaluation Operators](Read%2023f10953dc90438ca791b073a1c9216f/Evaluation%20Operators%20799ff8167be1444aa780ac4174d0ba14.md)
+[Evaluation Operators](Read/Evaluation_Operators.md)
 
-[Array](Read%2023f10953dc90438ca791b073a1c9216f/Array%2053ca0a60378c41edb3d16875a57beb7a.md)
+[Array](Read/Array.md)
 
 Comments
 
@@ -144,7 +144,7 @@ Geospatial(special)
 3. $meta
 4. $slice
 
-[Projection](Read%2023f10953dc90438ca791b073a1c9216f/Projection%207c9d8f56c0484e41b112b799a91e5500.md)
+[Projection](Read/Projection.md)
 
 # Understanding Cursors
 

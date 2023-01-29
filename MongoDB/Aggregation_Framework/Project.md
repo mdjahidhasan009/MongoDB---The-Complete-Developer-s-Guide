@@ -189,6 +189,6 @@ The final output
 Type "it" for more
 ```
 
-[Turning the Location Into a geoJSON Object ](Project%200448a2d7885348b19268e107a93412f7/Turning%20the%20Location%20Into%20a%20geoJSON%20Object%2031afdd6cf981499b97efe339e8975808.md)
+[Turning the Location Into a geoJSON Object ](Project/Turning_the_Location_Into_a_geoJSON_Object.md)
 
-[Understanding the ISO Week Year Operator](Project%200448a2d7885348b19268e107a93412f7/Understanding%20the%20ISO%20Week%20Year%20Operator%20c8dd89ca2e8e4b9ea806335edce6ade4.md)
+[Understanding the ISO Week Year Operator](Project/Understanding_the_ISO_Week_Year_Operator.md)

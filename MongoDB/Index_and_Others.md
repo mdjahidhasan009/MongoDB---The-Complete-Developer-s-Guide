@@ -7,7 +7,7 @@
 
 - Reference image for COLLSCAN vs IXSCAN
     
-    ![index.PNG](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/index.png)
+    ![index.PNG](Index_and_Others/index.png)
     
 
 COLLSCAN vs IXSCAN
@@ -1641,21 +1641,21 @@ For retrieving **20-30%** or **lower** can use the index, the query is **faster*
 As it first gets a document pointer/address of the document and then it checks that document with the given condition. Then if there is no index then it can fetch/get the document directly.
 > 
 
-[Compound index with text](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Compound%20index%20with%20text%2095d9e368084f4d40917f27fa8a6ead71.md)
+[Compound index with text](Index_and_Others/Compound_Index_with_Text.md)
 
-[Using indexes for sorting](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Using%20indexes%20for%20sorting%20f61564eb0af04f968c3fc080da6cae2f.md)
+[Using indexes for sorting](Index_and_Others/Using_Indexes_for_Sorting.md)
 
-[Configuring Indexes](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Configuring%20Indexes%203d6ab5403ffb4a9cbb5a2e8792292853.md)
+[Configuring Indexes](Index_and_Others/Configuring_Indexes.md)
 
-[Time-To-Live(TTL) index](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Time-To-Live(TTL)%20index%20592217e1f8f64075a0e4ed84a3d3c0c1.md)
+[Time-To-Live(TTL) index](Index_and_Others/Time-To-Live(TTL)_Index.md)
 
-[Query Diagnosis and Query Planning](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Query%20Diagnosis%20and%20Query%20Planning%2048314da26a1b4b9dbee5b993e836a3d6.md)
+[Query Diagnosis and Query Planning](Index_and_Others/Query_Diagnosis_and_Query_Planning.md)
 
-[How MongoDB rejects a plan](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/How%20MongoDB%20rejects%20a%20plan%20768b8a20f2404899a0625e8f06b0d4aa.md)
+[How MongoDB rejects a plan](Index_and_Others/How_MongoDB_rejects_a_plan.md)
 
-[Multi Key Indexes](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Multi%20Key%20Indexes%200ef37654e622454794bfe48a21e772ac.md)
+[Multi Key Indexes](Index_and_Others/Multi_Key_Indexes.md)
 
-[Text indexes(Special Type of Multi-Key index), Sorting using Text indexes, Combine Text index, Exclude while find in Text-Index](Index%20and%20others%2084553210381a4d75a5a14b08b8326263/Text%20indexes(Special%20Type%20of%20Multi-Key%20index),%20Sor%203b6269465b0e49858fb0a1366c6ca1ad.md)
+[Text indexes(Special Type of Multi-Key index), Sorting using Text indexes, Combine Text index, Exclude while find in Text-Index](Index_and_Others/Text_Indexes(Special_Type_of_Multi-Key_index),_Sor.md)
 
 # Setting the Default Language Using Weights
 
