@@ -64,7 +64,7 @@ Output
 	]
 }
 ```
-<detials>
+<details>
 	<summary>Checking using find</summary>
     
     Code
@@ -94,7 +94,6 @@ Output
     }
     ```
 </details>
- 
 
 ### Inserting number(double/float), Timestamp, Date
 
