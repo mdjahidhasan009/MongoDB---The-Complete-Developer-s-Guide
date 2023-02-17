@@ -20,8 +20,8 @@ Like `db.products.insertOne({ name: "Max" })` mongodb will do it automatically.T
 
 ```powershell
 {
-		"acknowledged": true,
-		"insertedId": ObjectId("61691b464aed55381c7714d3")
+    "acknowledged": true,
+    "insertedId": ObjectId("61691b464aed55381c7714d3")
 }
 ```
 
@@ -67,15 +67,12 @@ Output
 <details>
 	<summary>Checking using find</summary>
     
-    Code
-    
-    ```scheme
-     db.flightData.find().pretty()
-    ```
-    
-    Output
-    
-    ```scheme
+  Code
+```scheme
+    db.flightData.find().pretty()
+```   
+  Output
+
     {
     	"_id" : ObjectId("5f132aebd022deabe244f26d"),
     	"departureAirport" : "MUC",
@@ -92,7 +89,6 @@ Output
     	"distance" : 950,
     	"intercontinental" : false
     }
-    ```
 </details>
 
 ### Inserting number(double/float), Timestamp, Date
@@ -115,21 +111,23 @@ Output
      insertedAt: new Timestamp()
    }
 )
-
+```
 **Output**
+```scheme
 {
 	"acknowledged" : true,
 	"insertedId" : ObjectId("5f13ec400249b11a6aa5e37f")
 }
 ```
+<details>
+  <summary>Checking result</summary>
 
-- Checking result
-    
-    ```bash
-    > db.companies.find().pretty()
-    
-    **Output**
-    {
+```scheme
+  db.companies.find().pretty()
+```
+**Output**
+```scheme
+  {
     	"_id" : ObjectId("5f13ec400249b11a6aa5e37f"),
     	"name" : "Freash Apples Inc",
     	"isStartup" : true,
@@ -149,14 +147,16 @@ Output
     	"foundingData" : ISODate("2020-07-19T06:46:24.175Z"),
     	"insertedAt" : Timestamp(1595141184, 1)
     }
-    ```
-    
+```
+</details>
 
 Create int **32 bits** value instant of **default 64 bits floating** point value.
 
 ```scheme
-> db.numbers.insertOne({a: NumberInt(1)})
+ db.numbers.insertOne({a: NumberInt(1)})
+ ```
 **Output**
+```scheme
 {
 	"acknowledged" : true,
 	"insertedId" : ObjectId("5f13ef440249b11a6aa5e382")

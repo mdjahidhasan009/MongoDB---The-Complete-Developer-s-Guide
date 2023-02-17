@@ -9,27 +9,28 @@ find(filter, options)
 findOne(filter, options)
 ```
 
-- Initial data in db
-    
-    ```scheme
-    {
-    	"_id" : ObjectId("5f132aebd022deabe244f26d"),
-    	"departureAirport" : "MUC",
-    	"arrivalAirport" : "SFO",
-    	"aircraft" : "Airbus A380",
-    	"distance" : 12000,
-    	"intercontinental" : true
-    }
-    {
-    	"_id" : ObjectId("5f132aebd022deabe244f26e"),
-    	"departureAirport" : "LHR",
-    	"arrivalAirport" : "TXL",
-    	"aircraft" : "Airbus A320",
-    	"distance" : 950,
-    	"intercontinental" : false
-    }
-    ```
-    
+<details>
+  <summary>Initial data in db</summary>
+
+```scheme
+  {
+    "_id" : ObjectId("5f132aebd022deabe244f26d"),
+    "departureAirport" : "MUC",
+    "arrivalAirport" : "SFO",
+    "aircraft" : "Airbus A380",
+    "distance" : 12000,
+    "intercontinental" : true
+  }
+  {
+    "_id" : ObjectId("5f132aebd022deabe244f26e"),
+    "departureAirport" : "LHR",
+    "arrivalAirport" : "TXL",
+    "aircraft" : "Airbus A320",
+    "distance" : 950,
+    "intercontinental" : false
+  }
+```
+</details>
 
 ### `find()` with different scenarios
 
@@ -60,11 +61,15 @@ findOne(filter, options)
 ```
 
 **Can do some process at each data.**
+<details>
+  <summary>Code</summary>
 
-- Code
-    
-    ```scheme
-    > db.passengers.find().forEach((passengerData) => {printjson(passengerData)})
+  ```scheme
+  db.passengers.find().forEach((passengerData) => {printjson(passengerData)})
+  ```
+  **Output**
+
+  ```scheme  
     {
     	"_id" : ObjectId("5f1339f7d022deabe244f26f"),
     	"name" : "Max Schwarzmueller",
@@ -170,31 +175,46 @@ findOne(filter, options)
     	"name" : "Gordon Black",
     	"age" : 38
     }
-    ```
+  ```
+</details>
     
 
 **Get the statistics of database**
 
-- Inserting data for the below command
-    
-    ```scheme
-    > db.numbers.insertOne({a: 1})
-    {
-    	"acknowledged" : true,
-    	"insertedId" : ObjectId("5f13ed5a0249b11a6aa5e380")
-    }
-    > db.numbers.findOne()
-    { "_id" : ObjectId("5f13ed5a0249b11a6aa5e380"), "a" : 1 }
-    ```
-    
+<details>
+  <summary>Inserting data for the below command</summary>
+
+```scheme
+  db.numbers.insertOne({a: 1})
+```
+**Output**
+```scheme
+{
+    "acknowledged" : true,
+    "insertedId" : ObjectId("5f13ed5a0249b11a6aa5e380")
+}
+```
+<br/>
+
+```scheme
+db.numbers.findOne()
+```
+**Output**
+```scheme
+{ "_id" : ObjectId("5f13ed5a0249b11a6aa5e380"), "a" : 1 }
+```
+<br/>
 
 ```scheme
 > db.stats
-**Output**
-function (scale) {
-        return this.runCommand({dbstats: 1, scale: scale});
-    }
 ```
+**Output**
+```scheme
+function (scale) {
+  return this.runCommand({dbstats: 1, scale: scale});
+}
+```
+</details>
 
 ### Statistics of db
 
@@ -219,17 +239,20 @@ function (scale) {
 ```
 
 **Getting the datatype**
-
-- Inserting the document for the command below
-    
-    ```scheme
-    > db.numbers.insertOne({a: 1.5,b: "r"})
-    **Output**
-    {
-    	"acknowledged" : true,
-    	"insertedId" : ObjectId("5f13f19e0249b11a6aa5e386")
-    }
-    ```
+<details>
+  <summary>Inserting the document for the command below</summary>
+     
+```scheme
+db.numbers.insertOne({a: 1.5,b: "r"})
+```
+**Output**
+```scheme
+{
+  "acknowledged" : true,
+  "insertedId" : ObjectId("5f13f19e0249b11a6aa5e386")
+}
+```
+</details>
     
 
 ```scheme
