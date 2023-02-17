@@ -64,8 +64,8 @@ Output
 	]
 }
 ```
-
-- Checking using find
+<detials>
+	<summary>Checking using find</summary>
     
     Code
     
@@ -93,7 +93,8 @@ Output
     	"intercontinental" : false
     }
     ```
-    
+</details>
+ 
 
 ### Inserting number(double/float), Timestamp, Date
 
