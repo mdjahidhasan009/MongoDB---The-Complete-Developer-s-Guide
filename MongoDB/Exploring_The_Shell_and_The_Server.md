@@ -4,88 +4,61 @@
 - wiredTiger is the default storage engine of mongodb. Mongodb supports many storage engine.
 - any one can save your own configaration in a file in .cfg file.
 
-| mongod --help | List of all commands in the MongoDB. |
-| --- | --- |
-| -dbpath <path>
-sudo mongod --dbpath <path> | Where the database files will be stored. <path> is the path of the folder where we want
-to store the database files. |
-| -logpath<path>
-sudo mongod --logpath <path>/logs.log | Where the log files will be stored.Here logs.log is the log file itself. For the logpath we also have to give the log file name also. |
-| sudo mongod --fork | Will show an error as we have to give log path with this. As this will start mongod as an background service and without terminal mongod will not able to show the error and logs those will be stored in the log file. And the command will be
+| Command             | What it does                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `mongod --help`       | List of all commands in the MongoDB.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `-dbpath <path>` <br/><br/> `sudo mongod --dbpath <path>` | Where the database files will be stored. <path> is the path of the folder where we wantto store the database files.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `-logpath<path>` <br/><br/>  `sudo mongod --logpath <path>/logs.log` | Where the log files will be stored.Here logs.log is the log file itself. For the logpath we also have to give the log file name also.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `sudo mongod --fork`  | Will show an error as we have to give log path with this. As this will start mongod as an background service and without terminal mongod will not able to show the error and logs those will be stored in the log file. And the command will be  <br/><br/> here logs.log is the file name for the log  <br/><br/> `sudo mongod --fork --logpath <path>/logs.log` ⇒After typing this it will start mongodb as child process(background process).  <br/><br/> **mongo**  <br/> This will show mongo service on terminal with was running at background for fork command.If close the terminal mongodb will be remain running in the background. Then we will forcefully stop that this background process will be stopped net start MongoDB. This will start mongodb as background service in windows.  <br/><br/> **Stoping mongodb service**  <br/>For linux/mac => typing "mongo" will show mongodb service on the terminal. Then have to switch admin database by typing "use admin" then by this "db.shutdownServer()" commond background service will be shurt down. |
+| `sudo mongod -f <path>/*.cfg` | By this command we will tell mongodb where is my configaration file is otherwise it will pick its default file. We can also named it as *.conf.  <br/><br/> Simple configaration file structure(file name will be like *.cfg)  <br/>storage:  <br/>`dbPath: <path>`  <br/><br/>systemLog:  <br/>destination: file  <br/>path: <path>/logs.log => Here logs.log is the log file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `mongo --help` | Options for mongo shell. It has way less options because it's just connecting client not the server of mongodb. We can run it without connecting to a database because the shell is based on javascript. Also can run in quite mode to output less information.  <br/><br/>help  <br/>First type "mongo" command and then "help" command will give list of some important help information/command. We can also go to detail help like "help admin" => will show some useful commands for administrating the database. (after connect with an particular database by "use dbName")  <br/><br/>`db.help()` <br/> Help on db methods => collection of some useful command  <br/><br/>`db.myCollection.help()`  <br/>Help on collection method => collection of some useful command                                                                                                                                                                                                                                                                                                          |
 
-here logs.log is the file name for the log
-sudo mongod --fork --logpath <path>/logs.log ⇒After typing this it will start mongodb as child process(background process).
-    mongo
-                This will show mongo service on terminal with was running at background for   
-                fork command.If close the terminal mongodb will be remain running in the 
-                background. Then we will forcefully stop that this background process will be 
-                stopped net start MongoDB. This will start mongodb as background service in 
-                windows.
-    Stoping mongodb service
-                 For linux/mac => typing "mongo" will show mongodb service on the terminal.  
-                 Then have to switch admin database by typing "use admin" then by this 
-                 "db.shutdownServer()" commond background service will be shurt down.               |
-| sudo mongod -f <path>/*.cfg |  |
-|  | By this command we will tell mongodb where is my configaration file is otherwise it will pick its default file. We can also named it as
-*.conf.
+<details>
+    <summary>Others</summary>
+    <details>
+        <summary>mongod --help</summary>
 
-Simple configaration file structure(file name will be like *.cfg)
-storage:
-      dbPath: <path>
-systemLog:
-      destination: file
-      path: <path>/logs.log => Here logs.log is the log file |
-| mongo --help | Options for mongo shell. It has way less options because it's just connecting client not the server of mongodb. We can run it without
-connecting to a database because the shell is based on javascript. Also can run in quite mode to output less information.
-     help
-         First type "mongo" command and then "help" command will give list of some important help information/command. We can also go to
-detail help like "help admin" => will show some useful commands for administrating the database.
-(after connect with an particular database by "use dbName")
-    db.help()
-        Help on db methods => collection of some useful command
-    db.myCollection.help()
-        Help on collection method => collection of some useful command     |
+```schema
+        mongod --help
+        > help
+            db.help()                    help on db methods
+            db.mycoll.help()             help on collection methods
+            sh.help()                    sharding helpers
+            rs.help()                    replica set helpers
+            help admin                   administrative help
+            help connect                 connecting to a db help
+            help keys                    key shortcuts
+            help misc                    misc things to know
+            help mr                      mapreduce
+        
+            show dbs                     show database names
+            show collections             show collections in current database
+            show users                   show users in current database
+            show profile                 show most recent system.profile entries with time >= 1ms
+            show logs                    show the accessible logger names
+            show log [name]              prints out the last segment of log in memory, 'global' is default
+            use <db_name>                set current database
+            db.foo.find()                list objects in collection foo
+            db.foo.find( { a : 1 } )     list objects in foo where a == 1
+            it                           result of the last line evaluated; use to further iterate
+            DBQuery.shellBatchSize = x   set default number of items to display on shell
+            exit
+```
 
-### Others
+    
+</details>
 
-- mongod --help
-    
-    ```scheme
-    mongod --help
-    
-    > help
-    	db.help()                    help on db methods
-    	db.mycoll.help()             help on collection methods
-    	sh.help()                    sharding helpers
-    	rs.help()                    replica set helpers
-    	help admin                   administrative help
-    	help connect                 connecting to a db help
-    	help keys                    key shortcuts
-    	help misc                    misc things to know
-    	help mr                      mapreduce
-    
-    	show dbs                     show database names
-    	show collections             show collections in current database
-    	show users                   show users in current database
-    	show profile                 show most recent system.profile entries with time >= 1ms
-    	show logs                    show the accessible logger names
-    	show log [name]              prints out the last segment of log in memory, 'global' is default
-    	use <db_name>                set current database
-    	db.foo.find()                list objects in collection foo
-    	db.foo.find( { a : 1 } )     list objects in foo where a == 1
-    	it                           result of the last line evaluated; use to further iterate
-    	DBQuery.shellBatchSize = x   set default number of items to display on shell
-    	exit
-    ```
-    
-- DB helps
-    
-    ```scheme
+
+
+<details>
+        <summary>DB helps</summary>
+
+```scheme
     > use shop
     switched to db shop
-    ```
+```
     
-    ```scheme
+```scheme
     > db.help()
     DB methods:
     	db.adminCommand(nameOrDocument) - switches to 'admin' db, and runs command [just calls db.runCommand(...)]
@@ -140,16 +113,21 @@ detail help like "help admin" => will show some useful commands for administrati
     	db.shutdownServer()
     	db.stats()
     	db.version() current version of the server
-    ```
-    
-- Collection helps
-    
-    ```scheme
+```
+
+
+</details>
+
+
+<details>
+        <summary>Collection helps</summary>
+
+```scheme
     > show collections
     products
-    ```
+```
     
-    ```scheme
+```scheme
     > db.products.help()
     DBCollection help
     	db.products.find().help() - show DBCursor help
@@ -208,4 +186,10 @@ detail help like "help admin" => will show some useful commands for administrati
     	db.products.setWriteConcern( <write concern doc> ) - sets the write concern for writes to the collection
     	db.products.unsetWriteConcern( <write concern doc> ) - unsets the write concern for writes to the collection
     	db.products.latencyStats() - display operation latency histograms for this collection
-    ```
+```
+
+
+</details>
+
+
+</details>
