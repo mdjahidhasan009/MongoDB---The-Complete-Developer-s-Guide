@@ -1,56 +1,5 @@
 # Update
 
-- Some examples of PH course have to see is those are in the course will marge with this page
-    
-    ![mongodb.png](Update/mongodb.png)
-    
-    ![mongodb.png](Update/mongodb%201.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%202.png)
-    
-    ![mongodb.png](Update/mongodb%203.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%204.png)
-    
-    ![mongodb.png](Update/mongodb%205.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%206.png)
-    
-    ![mongodb.png](Update/mongodb%207.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%208.png)
-    
-    ![mongodb.png](Update/mongodb%209.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%2010.png)
-    
-    ![mongodb.png](Update/mongodb%2011.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%2012.png)
-    
-    ![mongodb.png](Update/mongodb%2013.png)
-    
-    Result
-    
-    ![mongodb.png](Update/mongodb%2014.png)
-    
-    ![mongodb.png](Update/mongodb%2015.png)
-    
-    ![mongodb.png](Update/mongodb%2016.png)
-    
-
 1. Document Updating Operator 2. Updating Fields 3. Updating Arrays
 
 # Document Updating Operator
@@ -71,12 +20,13 @@
 
 The set changed or added a new document
 
-- Inserting data
-    
-    ```cpp
+<details>
+  <summary>Inserting data</summary>
+
+```schema
     > use user
     switched to db user
-    
+
     > db.users.insertMany(
     		[
     			  {
@@ -198,8 +148,8 @@ The set changed or added a new document
     		"Hiking"
     	]
     }
-    ```
-    
+  ```
+</details>
 
 # `updateOne`
 
@@ -782,9 +732,10 @@ Here `.$` ⇒ This will automatically refer to the element in our filter as I wa
 
 Adding new field
 
-- Before adding the field was
-    
-    ```bash
+<details>
+<summary>Before adding the field was</summary>
+
+```schema
     { 
     		"_id" : ObjectId("61c351e8d7b30fa4425c3ca7"), 
     		"name" : "Max", 
@@ -794,8 +745,8 @@ Adding new field
     		], 
     		"isSporty" : true 
     }
-    ```
-    
+  ```
+</details>
 
 ```bash
 > db.users.updateMany(
@@ -1001,38 +952,20 @@ More than one element
 		}
 )
 ```
-
-- Selected elements are get added
-    
-    Although we keep Hiking last but for sorting based on frequency it came first
-    
-    ![Add.png](Update/Add.png)
     
 
 Also can add specified amount of element from `$each` array. Such as `$sort: {frequency: -1}, $slice: 1` will first sort array in `$each` by there frequency and then will return first element. `$slice: n` have to replace n with number and `$slice` will return first n numbers of element from the array.
 
 ## Removing/Delete Elements from array
 
-<aside>
-💡 `$pull` describes an object that we want to what/how to pull
 
-</aside>
+>💡 `$pull` describes an object that we want to what/how to pull
 
 What to remove every element where title is “Hiking”
 
 ```cpp
 db.users.updateOne({name: 'Maria'}, {$pull: {hobbies: {title: 'Hiking'}}})
 ```
-
-- Before and after pull
-    
-    Before
-    
-    ![before.png](Update/before.png)
-    
-    After
-    
-    ![After.png](Update/After.png)
     
 
 ### Remove the last element of an array

@@ -164,9 +164,10 @@ Here we get the all details of the plan which is good and the execution time
 db.customers.explain('allPlansExecution').find({age: 30, name: 'Max'})
 ```
 
-- Output
-    
-    ```bash
+<details>
+<summary>Output</summary>
+
+```bash
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -444,4 +445,6 @@ db.customers.explain('allPlansExecution').find({age: 30, name: 'Max'})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>

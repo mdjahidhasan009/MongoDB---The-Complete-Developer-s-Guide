@@ -1,18 +1,16 @@
 # Bucket
 
-<aside>
-💡 Categorizes incoming documents into groups, called buckets, based on a specified expression and bucket boundaries and outputs a document per each bucket. Also can perform some statistics.
 
-</aside>
+>💡 Categorizes incoming documents into groups, called buckets, based on a specified expression and bucket boundaries and outputs a document per each bucket. Also can perform some statistics.
+
 
 Let's prepare a bucket stage, using bucket can create a different categories and filter
 
 Boundaries means range/levels like 0-18, 18-30,30-50, 50-80, 80-120, in every range includes first value execute not last value, 18-30 ⇒ means 18 includes in the range but not includes 30. There are noting in 0 - 18 and 80 to 120 range so the following query give as only three bucket.
 
-> `{ "_id" : 18, "numPersons" : 868, "average" : 25.101382488479263 } => 18 to less than 30
-{ "_id" : 30, "numPersons" : 1828, "average" : 39.4917943107221 } => 30 to less than 59
-{ "_id" : 50, "numPersons" : 2304, "average" : 61.46440972222222 } => 50 to all upperbound`
-> 
+> `{ "_id" : 18, "numPersons" : 868, "average" : 25.101382488479263 } => 18 to less than 30` <br/>
+> `{ "_id" : 30, "numPersons" : 1828, "average" : 39.4917943107221 } => 30 to less than 59` <br/>
+> `{ "_id" : 50, "numPersons" : 2304, "average" : 61.46440972222222 } => 50 to all upperbound`
 
 ```cpp
 > db.persons.aggregate([
@@ -60,12 +58,11 @@ There are no people less than 18 and greater than 80 and equals to 80. Output no
 
 Adding more levels
 
-> `{ _id: 18, numPersons: 868, average: 25.101382488479263 }, => 18 to less than 30
-{ _id: 30, numPersons: 910, average: 34.51758241758242 }, => 30 to less than 40
-{ _id: 40, numPersons: 918, average: 44.42265795206972 }, => 40 to less than 50
-{ _id: 50, numPersons: 976, average: 54.533811475409834 }, => 50 to less than 60
-{ _id: 60, numPersons: 1328, average: 66.55798192771084 }` ⇒ 60 to all upper-bound
-> 
+> `{ _id: 18, numPersons: 868, average: 25.101382488479263 }, => 18 to less than 30`<br/>
+> `{ _id: 30, numPersons: 910, average: 34.51758241758242 }, => 30 to less than 40`<br/>
+> `{ _id: 40, numPersons: 918, average: 44.42265795206972 }, => 40 to less than 50`<br/>
+> `{ _id: 50, numPersons: 976, average: 54.533811475409834 }, => 50 to less than 60`<br/>
+> `{ _id: 60, numPersons: 1328, average: 66.55798192771084 } ⇒ 60 to all upper-bound`
 
 ```cpp
 > db.persons.aggregate([

@@ -76,9 +76,10 @@ Such as if all keys have 4 values in the array key and have a total of 1000 docu
 db.contacts.explain('executionStats').find({hobbies: 'Sports'})
 ```
 
-- Output  `"stage" : "IXSCAN"` `"isMultiKey" : true`
-    
-    ```bash
+<details>
+<summary>Output  `"stage" : "IXSCAN"` `"isMultiKey" : true`</summary>
+
+```schema
      {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -185,7 +186,9 @@ db.contacts.explain('executionStats').find({hobbies: 'Sports'})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>
     
 
 Lets create another index
@@ -207,9 +210,10 @@ Here index does not work, because it holds all documents not the nested elements
 db.contacts.explain('executionStats').find({'addresses.street': 'Main Street'})
 ```
 
-- Output `"stage" : "COLLSCAN"`
-    
-    ```bash
+<details>
+<summary>Output `"stage" : "COLLSCAN"`</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -266,7 +270,9 @@ db.contacts.explain('executionStats').find({'addresses.street': 'Main Street'})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>
     
 
 It works when querying as we are searching for the whole address document and we create an index of whole documents not for values in the nested document.
@@ -275,9 +281,10 @@ It works when querying as we are searching for the whole address document and we
 db.contacts.explain('executionStats').find({addresses: {street: 'Main Street'}})
 ```
 
-- Output `"stage" : "IXSCAN"`
-    
-    ```bash
+<details>
+<summary>Output `"stage" : "IXSCAN"`</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -382,7 +389,8 @@ db.contacts.explain('executionStats').find({addresses: {street: 'Main Street'}})
     	},
     	"ok" : 1
     }
-    ```
+```
+</details>
     
 
 If the index is created like then it works, we are creating index for it also have a multi-key index
@@ -404,9 +412,10 @@ This is now index scan
 db.contacts.explain('executionStats').find({'addresses.street': 'Main Street'})
 ```
 
-- Output `"stage" : "IXSCAN"`
-    
-    ```bash
+<details>
+<summary>Output `"stage" : "IXSCAN"`</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -509,7 +518,9 @@ db.contacts.explain('executionStats').find({'addresses.street': 'Main Street'})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>
     
 
 Still **multi-key index** is super **helpful** if have **queries** that regularly target **array values** or even **nested values** in an **embedded document** in **arrays**.

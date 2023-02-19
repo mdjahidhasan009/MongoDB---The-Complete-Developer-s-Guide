@@ -1,12 +1,12 @@
 # Delete
+<details>
+<summary>Initialization</summary>
 
-- init
-    
-    ```cpp
+```schema
     use user
     switched to db user
-    ```
-    
+  ```
+</details>
 
 ## Deleting one document
 

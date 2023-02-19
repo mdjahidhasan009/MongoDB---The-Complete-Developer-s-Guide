@@ -45,9 +45,10 @@ Get info
 db.customers.explain('executionStats').find({name: 'Max'})
 ```
 
-- Output `"totalKeysExamined" : 1,` `"totalDocsExamined" : 1`
-    
-    ```bash
+<details>
+<summary>Output `"totalKeysExamined" : 1,` `"totalDocsExamined" : 1`</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -150,7 +151,8 @@ db.customers.explain('executionStats').find({name: 'Max'})
     	},
     	"ok" : 1
     }
-    ```
+```
+</details>
     
 
 Let's implement **covered queries.** If can optimize the query, then have to reach that covered query state. Useful when typically returning the specific fields
@@ -159,9 +161,10 @@ Let's implement **covered queries.** If can optimize the query, then have to rea
 db.customers.explain('executionStats').find({name: 'Max'},{_id: 0, name: 1})
 ```
 
-- Output `"totalKeysExamined" : 1`, `"totalDocsExamined" : 0`
-    
-    ```bash
+<details>
+<summary>Output `"totalKeysExamined" : 1`, `"totalDocsExamined" : 0`</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -270,7 +273,7 @@ db.customers.explain('executionStats').find({name: 'Max'},{_id: 0, name: 1})
     	},
     	"ok" : 1
     }
-    ```
-    
+```
+</details>
 
 **This cover query does not understand fully.**

@@ -2,9 +2,10 @@
 
 # Pushing Elements Into Newly Created Arrays
 
-- Adding initial data
-    
-    ```bash
+<details>
+<summary>Adding initial data</summary>
+
+```schema
     > db.friends.insertMany(
     	[
     	  {
@@ -39,7 +40,7 @@
     	  }
     	]
     )
-    
+
     **Output**
     {
       acknowledged: true,
@@ -49,8 +50,8 @@
         '2': ObjectId("6342b193861a3d80d340bf19")
       }
     }
-    ```
-    
+```
+
 
 Push Operator allows pushing a new element into the all hobbies array for every incoming document. This means pushing the whole individual array of a document as an element(nested array).
 
@@ -92,6 +93,8 @@ Push Operator allows pushing a new element into the all hobbies array for every 
 	]
 }
 ```
+</details>
+
 
 # Understanding the unwind Stage
 

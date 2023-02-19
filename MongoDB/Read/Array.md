@@ -6,12 +6,15 @@
 
  `$all`
 
-- Initial
-    
-    ```bash
+<details>
+  <summary>Initial</summary>
+
+```schema
     > use user
     switched to db user
-    ```
+  ```
+
+</details>
     
 
 Find all hobbies that are sports.
@@ -88,12 +91,14 @@ Act as an **embedded document**. This is path embedded approach not only on dire
 
 # `$all`
 
-- init
-    
-    ```cpp
+<details>
+<summary>Initialization</summary>
+
+  ```schema
     > use boxOffice
     > db.moviestarts.find().pretty()
-    ```
+  ```
+</details>
     
 
 Want to find movies that have a genre of exactly thriller and action and also in the same order first action then thriller. **Order maters**.

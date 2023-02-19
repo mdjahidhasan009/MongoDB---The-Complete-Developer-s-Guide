@@ -192,13 +192,7 @@ BroadCast >	 |       |                          to right Shard       |
 shared    shared    shared                                         shared
 ```
 
-![Screenshot from 2022-10-22 23-09-18.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_23-09-18.png)
-
-![Screenshot from 2022-10-22 23-08-19.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_23-08-19.png)
-
 # Deploying a MongoDB Server
-
-![Screenshot from 2022-10-22 23-10-57.png](Performance_Fault_Tolerancy_Deployment/Screenshot_from_2022-10-22_23-10-57.png)
 
 localhost(mongod) -------> Atlas(mongod)
 

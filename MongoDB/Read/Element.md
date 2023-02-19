@@ -3,71 +3,75 @@
 `$exists` `$type`
 
 ### `$exists`
+<details>
+<summary>Inserting data</summary>
 
-- Inserting data
+```bash
+> db.users.insertMany([
+          {
+                  name: 'Max', 
+                  hobbies: [
+                        {title: 'Sports', frequency: 3},
+                          {title: 'Cooking', frequency: 6}
+                ], 
+                  phone: 0123495334
+          },
+          {
+                  name: 'Manuel', 
+                  hobbies: [
+                          {title: 'Cooking', frequency: 5},
+                          {title: 'Cars', frequency: 6}
+                  ], 
+                  phone: '043453495334', 
+                  age: 30
+          }
+  ])
+  **Output**
+  {
+      "acknowledged" : true,
+      "insertedIds" : [
+          ObjectId("5f172a343a76a40cd42b836a"),
+          ObjectId("5f172a343a76a40cd42b836b")
+      ]
+  }
+  
+  > db.users.find().pretty()
+  {
+      "_id" : ObjectId("5f172a343a76a40cd42b836a"),
+      "name" : "Max",
+      "hobbies" : [
+          {
+              "title" : "Sports",
+              "frequency" : 3
+          },
+          {
+              "title" : "Cooking",
+              "frequency" : 6
+          }
+      ],
+      "phone" : 123495334
+  }
+  {
+      "_id" : ObjectId("5f172a343a76a40cd42b836b"),
+      "name" : "Manuel",
+      "hobbies" : [
+          {
+              "title" : "Cooking",
+              "frequency" : 5
+          },
+          {
+              "title" : "Cars",
+              "frequency" : 6
+          }
+      ],
+      "phone" : "043453495334",
+      "age" : 30
+  }
+  ```
+
+</details>
     
-    ```bash
-    > db.users.insertMany([
-    		{
-    				name: 'Max', 
-    				hobbies: [
-    					  {title: 'Sports', frequency: 3},
-    						{title: 'Cooking', frequency: 6}
-    			  ], 
-    				phone: 0123495334
-    		},
-    		{
-    				name: 'Manuel', 
-    				hobbies: [
-    						{title: 'Cooking', frequency: 5},
-    						{title: 'Cars', frequency: 6}
-    				], 
-    				phone: '043453495334', 
-    				age: 30
-    		}
-    ])
-    **Output**
-    {
-    	"acknowledged" : true,
-    	"insertedIds" : [
-    		ObjectId("5f172a343a76a40cd42b836a"),
-    		ObjectId("5f172a343a76a40cd42b836b")
-    	]
-    }
     
-    > db.users.find().pretty()
-    {
-    	"_id" : ObjectId("5f172a343a76a40cd42b836a"),
-    	"name" : "Max",
-    	"hobbies" : [
-    		{
-    			"title" : "Sports",
-    			"frequency" : 3
-    		},
-    		{
-    			"title" : "Cooking",
-    			"frequency" : 6
-    		}
-    	],
-    	"phone" : 123495334
-    }
-    {
-    	"_id" : ObjectId("5f172a343a76a40cd42b836b"),
-    	"name" : "Manuel",
-    	"hobbies" : [
-    		{
-    			"title" : "Cooking",
-    			"frequency" : 5
-    		},
-    		{
-    			"title" : "Cars",
-    			"frequency" : 6
-    		}
-    	],
-    	"phone" : "043453495334",
-    	"age" : 30
-    }
-    ```
     
 
 Here checking whether an element exists or not

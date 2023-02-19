@@ -2,9 +2,10 @@
 
 ### Want to find the 10 users, the 10 persons with the oldest birth date, so the lowest birth date
 
-- See the data format
-    
-    ```bash
+<details>
+<summary>See the data format</summary>
+
+```schema
     > db.persons.aggregate([
         {
             $project: {
@@ -101,7 +102,9 @@
       }
     ]
     Type "it" for more
-    ```
+```
+
+</details>
     
 
 ```cpp

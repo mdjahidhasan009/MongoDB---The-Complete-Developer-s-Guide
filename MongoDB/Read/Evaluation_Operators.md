@@ -15,14 +15,14 @@ Return the document that found the word. it is not the best way(efficient) to fi
 ```
 
 ### `$expr`
+<details>
+  <summary>Inserting Demo Data</summary>
 
-- Inserting Demo Data
-    
-    ```cpp
+  ```schema
     > use financialDatalet 
     switched to db financialData
     > db.sales.insertMany([{volume: 100, target: 120},{volume: 89, target: 80},{volume: 200, target: 177}])
-    
+
     > db.sales.find().pretty()
     {
     	"_id" : ObjectId("5f17491c3a76a40cd42b836d"),
@@ -39,7 +39,10 @@ Return the document that found the word. it is not the best way(efficient) to fi
     	"volume" : 200,
     	"target" : 177
     }
-    ```
+  ```
+</details>
+    
+    
     
 
 We want to find all entries and all items in this collection where the volume is above the target.

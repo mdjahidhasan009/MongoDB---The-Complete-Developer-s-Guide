@@ -14,7 +14,6 @@ Users Collection              Posts Collection
 ---------------------------------------------------------
 ```
 
-![Screenshot from 2022-10-22 23-31-48.png](Transactions/Screenshot_from_2022-10-22_23-31-48.png)
 
 Always have to change IP address into MongoDB cloud cluster. First have access to the MongoDB cloud
 mongo "mongodb+srv://mytestingcluster.n7v1t.mongodb.net/<test1>" --username jahid

@@ -4,10 +4,9 @@
 2. Query Selectors (READ)
 3. Projection Operators(READ)
 
-<aside>
-💡 **Aggregation:** This is reading data from the database but it allows to set up of a pipeline of stages to funnel the data throw and permits a bunch of operations that allow the user to shape the data and get back from the database to the form needed in a particular app.
 
-</aside>
+>💡 **Aggregation:** This is reading data from the database but it allows to set up of a pipeline of stages to funnel the data throw and permits a bunch of operations that allow the user to shape the data and get back from the database to the form needed in a particular app.
+
 
 ```bash
 db.myCollection.find({age: 30)
@@ -21,18 +20,6 @@ db.myCollection.find({age: { $gt: 30}})
 	--> Filter(Range) 
 			&gt --> Operator
 ```
-
-- Some more examples
-    
-    ![mongodb.png](Read/mongodb.png)
-    
-    ![mongodb.png](Read/mongodb%201.png)
-    
-    ![mongodb.png](Read/mongodb%202.png)
-    
-    ![mongodb.png](Read/mongodb%203.png)
-    
-    ![mongodb.png](Read/mongodb%204.png)
     
 
 ### Operators
@@ -50,73 +37,79 @@ db.myCollection.find({age: { $gt: 30}})
 | Query Operator | Locate Data | blocked | $eq |
 | Projection Operator | Modify data presentation | blocked | $ |
 | Update Operator | Modify + add additional data | not blocked | &inc |
-- `findOne()` ⇒ First matching document(if filter given) or first element of document | Simple movie sample
+
+<details>
+  <summary>`findOne()` ⇒ First matching document(if filter given) or first element of document | Simple movie sample</summary>
+  
+  ```bash
+  > use movieData
+  switched to db movieData
+  > cls
+  
+  // findOne() => First matching document
+  
+  > db.movies.findOne()
+  {
+      "_id" : ObjectId("5f15a22a9bfbc37d06f66616"),
+      "id" : 1,
+      "url" : "http://www.tvmaze.com/shows/1/under-the-dome",
+      "name" : "Under the Dome",
+      "type" : "Scripted",
+      "language" : "English",
+      "genres" : [
+          "Drama",
+          "Science-Fiction",
+          "Thriller"
+      ],
+      "status" : "Ended",
+      "runtime" : 60,
+      "premiered" : "2013-06-24",
+      "officialSite" : "http://www.cbs.com/shows/under-the-dome/",
+      "schedule" : {
+          "time" : "22:00",
+          "days" : [
+              "Thursday"
+          ]
+      },
+      "rating" : {
+          "average" : 6.5
+      },
+      "weight" : 91,
+      "network" : {
+          "id" : 2,
+          "name" : "CBS",
+          "country" : {
+              "name" : "United States",
+              "code" : "US",
+              "timezone" : "America/New_York"
+          }
+      },
+      "webChannel" : null,
+      "externals" : {
+          "tvrage" : 25988,
+          "thetvdb" : 264492,
+          "imdb" : "tt1553656"
+      },
+      "image" : {
+          "medium" : "http://static.tvmaze.com/uploads/images/medium_portrait/0/1.jpg",
+          "original" : "http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg"
+      },
+      "summary" : "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
+      "updated" : 1529612668,
+      "_links" : {
+          "self" : {
+              "href" : "http://api.tvmaze.com/shows/1"
+          },
+          "previousepisode" : {
+              "href" : "http://api.tvmaze.com/episodes/185054"
+          }
+      }
+  }
+  ```
+
+</details>
     
-    ```bash
-    > use movieData
-    switched to db movieData
-    > cls
     
-    // findOne() => First matching document
-    
-    > db.movies.findOne()
-    {
-    	"_id" : ObjectId("5f15a22a9bfbc37d06f66616"),
-    	"id" : 1,
-    	"url" : "http://www.tvmaze.com/shows/1/under-the-dome",
-    	"name" : "Under the Dome",
-    	"type" : "Scripted",
-    	"language" : "English",
-    	"genres" : [
-    		"Drama",
-    		"Science-Fiction",
-    		"Thriller"
-    	],
-    	"status" : "Ended",
-    	"runtime" : 60,
-    	"premiered" : "2013-06-24",
-    	"officialSite" : "http://www.cbs.com/shows/under-the-dome/",
-    	"schedule" : {
-    		"time" : "22:00",
-    		"days" : [
-    			"Thursday"
-    		]
-    	},
-    	"rating" : {
-    		"average" : 6.5
-    	},
-    	"weight" : 91,
-    	"network" : {
-    		"id" : 2,
-    		"name" : "CBS",
-    		"country" : {
-    			"name" : "United States",
-    			"code" : "US",
-    			"timezone" : "America/New_York"
-    		}
-    	},
-    	"webChannel" : null,
-    	"externals" : {
-    		"tvrage" : 25988,
-    		"thetvdb" : 264492,
-    		"imdb" : "tt1553656"
-    	},
-    	"image" : {
-    		"medium" : "http://static.tvmaze.com/uploads/images/medium_portrait/0/1.jpg",
-    		"original" : "http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg"
-    	},
-    	"summary" : "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
-    	"updated" : 1529612668,
-    	"_links" : {
-    		"self" : {
-    			"href" : "http://api.tvmaze.com/shows/1"
-    		},
-    		"previousepisode" : {
-    			"href" : "http://api.tvmaze.com/episodes/185054"
-    		}
-    	}
-    }
-    ```
     
 
 # Query Selectors & Projection

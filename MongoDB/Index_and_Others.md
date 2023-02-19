@@ -5,11 +5,6 @@
 - COLLSCAN vs IXSCAN
 - plan ⇒ winningPlan and rejectionPlan
 
-- Reference image for COLLSCAN vs IXSCAN
-    
-    ![index.PNG](Index_and_Others/index.png)
-    
-
 COLLSCAN vs IXSCAN
 
 COLLSCAN  ⇒ Scan all documents then filter. (No index)
@@ -29,20 +24,22 @@ Indexes are updated with every insert
 ---------- Queries & Sorting -----------
 4. Indexes can be used for both queries and efficient sorting.
 5. Compound indexes can be used as a whole or in a 'left-to-right' (prefix) manner (e.g only consider the 'name' of the 'name-age' compound index)
-- Importing data
-    
-    The JSON file is the persons.json have to write this command before starting mongo server using `mongo`
-    
-    ```bash
+
+<details>
+  <summary>Importing data</summary>
+
+The JSON file is the persons.json have to write this command before starting mongo server using `mongo`
+
+  ```schema
     mongoimport persons.json -d contactData -c contacts --jsonArray
     **Output** 
     2022-09-24T12:29:31.550+0600	connected to: localhost
     2022-09-24T12:29:31.912+0600	imported 5000 documents
-    ```
+  ```
     
     Checking the datebase
     
-    ```bash
+  ```schema
     mongo
     > show dbs
     **Output**
@@ -115,7 +112,9 @@ Indexes are updated with every insert
     	},
     	"nat" : "DK"
     }
-    ```
+  ```
+
+</details>
     
 
 # Adding a Single Field Index
@@ -125,9 +124,11 @@ Indexes are updated with every insert
 > db.contacts.find({'dob.age': {$gt: 60}}).pretty()
 ```
 
-- Output
-    
-    ```bash
+<details>
+
+<summary>Output</summary>
+
+```schema
     {
     	"_id" : ObjectId("632e94b79d41938c381fe6c3"),
     	"gender" : "female",
@@ -1190,7 +1191,9 @@ Indexes are updated with every insert
     }
     Type "it" for more
     >
-    ```
+  ```
+
+</details>
     
 
 ```bash
@@ -1204,10 +1207,10 @@ Analyze database with `explain()` method
 ```cpp
 db.contacts.explain().find({'dob.age': {$gt: 60}})
 ```
+<details>
+<summary>Output</summary>
 
-- Output
-    
-    ```bash
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -1237,7 +1240,8 @@ db.contacts.explain().find({'dob.age': {$gt: 60}})
     	},
     	"ok" : 1
     }
-    ```
+```
+</details>
     
 
 Here also have different types of plans  
@@ -1250,10 +1254,10 @@ Getting the detailed query
 ```cpp
 db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
 ```
+<details>
+<summary>Output</summary>
 
-- Output
-    
-    ```bash
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -1310,7 +1314,9 @@ db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>
     
 
 Creating index, an index is defined as a document. Can **create** an **index** of **top-level fields** also **embedded fields**.
@@ -1334,9 +1340,10 @@ Without index every different query ha different values
 db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
 ```
 
-- Output
-    
-    ```bash
+<details>
+<summary>Output</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -1439,7 +1446,9 @@ db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>
     
 
 `executionTimeMillis` was 25 before indexing after indexing it became 12.
@@ -1456,9 +1465,11 @@ db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
 
 `{'dob.age': {$gt: 20} }` is true for all document and returns it takes 22 milliseconds for query if have an index for `dob.age` embedded document.
 
-- When have index `"executionTimeMillis" : 22`
-    
-    ```bash
+
+<details>
+<summary>When have index `"executionTimeMillis" : 22`</summary>
+
+```schema
     > db.contacts.explain("executionStats").find({'dob.age': {$gt: 20}})
     **Output**
     {
@@ -1563,11 +1574,13 @@ db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
     	},
     	"ok" : 1
     }
-    ```
+  ```
+</details>
     
-- After deleting index `"executionTimeMillis" : 16`
-    
-    ```bash
+<details>
+<summary>After deleting index `"executionTimeMillis" : 16`</summary>
+
+```schema
     > db.contacts.dropIndex({"dob.age": 1 })
     **Output**
     { "nIndexesWas" : 2, "ok" : 1 }
@@ -1630,7 +1643,9 @@ db.contacts.explain("executionStats").find({'dob.age': {$gt: 60}})
     	},
     	"ok" : 1
     }
-    ```
+```
+</details>
+
     
 
 If we have to **retrieve** a **large number/majority of documents** nearly 70 to 80% of the whole document then the **index** can affect the query to be **slower**, cause for using a query we have to add an extra step. 
@@ -1822,10 +1837,11 @@ Let examine the query
 ```cpp
 db.ratings.explain('executionStats').find({age: {$gt: 80}})
 ```
+<details>
 
-- Output `"executionTimeMillis" : 218`
-    
-    ```bash
+<summary>Output `"executionTimeMillis" : 218`</summary>
+
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -1928,7 +1944,9 @@ db.ratings.explain('executionStats').find({age: {$gt: 80}})
     	},
     	"ok" : 1
     }
-    ```
+```
+
+</details>
     
 
 Let's drop the index
@@ -1945,10 +1963,10 @@ Let execute the previous query
 db.ratings.explain('executionStats').find({age: {$gt: 80}})
 "executionTimeMillis" : 367
 ```
+<details>
+<summary>Output `"executionTimeMillis" : 379`</summary>
 
-- Output `"executionTimeMillis" : 379`
-    
-    ```bash
+```schema
     {
     	"queryPlanner" : {
     		"plannerVersion" : 1,
@@ -2005,7 +2023,11 @@ db.ratings.explain('executionStats').find({age: {$gt: 80}})
     	},
     	"ok" : 1
     }
-    ```
+```
+</details>
+
+    
+    
     
 
 Let's create a Background index

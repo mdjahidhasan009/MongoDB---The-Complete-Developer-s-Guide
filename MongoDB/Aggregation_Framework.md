@@ -104,7 +104,7 @@ The aggregate method takes an array and it takes an array cause to have to defin
 > The first step will receive the entire data right from the collection. The next step does something with the data returned by the first step. Aggregate does not go ahead, fetch all the data from the database and give it to the user to do something with that. The first step runs on database and can take advantage of indexes, so if the user filter in the first step or sort there, the user can take advantage of indexes. So users don’t have to fetch all the documents just because the user using aggregate. Aggregate as find executes on the MongoDB server and therefore can take advantage of things like indexes.
 > 
 
-```bash
+```schema
 db.persons.aggregate(
 	[
 		{ $match: {gender: 'female'} }
@@ -112,9 +112,10 @@ db.persons.aggregate(
 ).pretty()
 ```
 
-- Output
-    
-    ```bash
+<details>
+<summary>Output</summary>
+
+```schema
     {
     	"_id" : ObjectId("633672f63d520b88d4dce607"),
     	"gender" : "female",
@@ -1176,7 +1177,9 @@ db.persons.aggregate(
     	"nat" : "AU"
     }
     Type "it" for more
-    ```
+```
+
+</details>
     
 
 [Group](Aggregation_Framework/Group.md)

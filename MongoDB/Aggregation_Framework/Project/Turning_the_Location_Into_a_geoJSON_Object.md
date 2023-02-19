@@ -274,9 +274,10 @@ Name, email, and location will be passed to the second `$project`. And second, t
 Type "it" for more
 ```
 
-- Converting coordinate into geoJson type(Point)
-    
-    ```bash
+<details>
+<summary>Converting coordinate into geoJson type(Point)</summary>
+
+  ```schema
     > db.persons.aggregate([
         {
             $project: {
@@ -553,7 +554,9 @@ Type "it" for more
     	"fullName" : "Gonca Alnıaçık"
     }
     Type "it" for more
-    ```
+  ``` 
+
+</details>
     
 
 We are getting GeoJson coordinates as a string, so have to convert them into numbers.
